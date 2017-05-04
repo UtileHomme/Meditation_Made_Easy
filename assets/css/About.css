@@ -1,0 +1,55 @@
+img
+{
+    height:200px;
+    width: 200px;
+}
+
+.bg-1
+{
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
+.bg-2
+{
+    background-color: #474e5d;
+    color: #ffffff;
+}
+
+.bg-3
+{
+    background-color:yellow;
+    color:#555555;
+}
+
+.bg-4
+{
+    background-color: #2f2f2f;
+    color: #ffffff;
+}
+
+h3
+{
+    font-size: 35px;
+}
+p
+{
+    font-size:25px;
+}
+
+
+.navbar {
+    margin-bottom: 0px;
+
+    border-radius: 0;
+    height: 50px;
+}
+
+body {
+    margin-top: 0px;
+}
+
+.navbar-default .navbar-toggle {
+
+    /*margin-bottom: 0px;*/
+}

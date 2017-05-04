@@ -13,18 +13,19 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.css" />
 
-    <style type="text/css">
-    body { background:#ffff99 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
-    </style>
+
 </head>
 <body>
-
     <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
+    <div class="container-fluid">
+
+
+
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <!-- <span class="sr-only">Toggle navigation</span> -->
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -32,13 +33,24 @@
                 <?= anchor('user','Meditation Tracking Made Easy',['class'=>'navbar-brand']) ?>
             </div>
 
-            <div class="collapse navbar-collapse" >
+            <div class="navbar-collapse collapse " >
                 <ul class="nav navbar-nav navbar-right ">
-                    <li><?= anchor('user/about','About') ?></li>
-                    <li><?= anchor('register','Register') ?></li>
-                    <li><?= anchor('login','Login') ?></li>
+                    <li><?= anchor('user/about','About','style="font-size:15px;"')?></li>
+                    <li><?= anchor('register','<span class="glyphicon glyphicon-user"> SignUp</span>')?></li>
+                    <li><?= anchor('login','<span class="glyphicon glyphicon-log-in"> Login</span>') ?></li>
 
                 </ul>
             </div>
-        </div>
-    </nav>
+
+            </div>
+        </nav>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

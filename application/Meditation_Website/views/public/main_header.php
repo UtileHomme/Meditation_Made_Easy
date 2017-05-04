@@ -13,37 +13,19 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.css" />
 
-    <style type="text/css">
-    body { background:#ffff99 !important; /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
-        /*background-image: url('assets/images/med2.jpg') no-repeat center center;
-        /*background-size: cover;
-        min-height: 100vh;
-        padding-top: 20px;
-        padding-bottom: 20px;*/
-        }
-        html
-        {
-        background-image: url('assets/images/med14.jpg');
-        width: 100vw;
-        height: 100vh;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-    }
+    <link href="assets/css/CustomStyles.css" rel="stylesheet" />
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" /> -->
 
-    .navbar
-    {
-    overflow: auto;
-    /*background:transparent;*/
-    }
-    </style>
+
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
+    <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <!-- <span class="sr-only">Toggle navigation</span> -->
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -51,13 +33,80 @@
                 <?= anchor('user','Meditation Tracking Made Easy',['class'=>'navbar-brand']) ?>
             </div>
 
-            <div class="collapse navbar-collapse" >
+            <div class="navbar-collapse collapse " >
                 <ul class="nav navbar-nav navbar-right ">
-                    <li><?= anchor('user/about','About') ?></li>
-                    <li><?= anchor('register','Register') ?></li>
-                    <li><?= anchor('login','Login') ?></li>
-
+                    <li><?= anchor('user/about','About','style="font-size:15px;"')?></li>
+                    <li><?= anchor('register','<span class="glyphicon glyphicon-user"> SignUp</span>')?></li>
+                    <li><?= anchor('login','<span class="glyphicon glyphicon-log-in"> Login</span>') ?></li>
                 </ul>
             </div>
+
+            </div>
+        </nav>
+
+
+
+    <div id="imageCarousel" class="carousel slide" data-wrap="true" data-pause="false" data-interval="false" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#imageCarousel" data-slide-to="1"></li>
+            <li data-target="#imageCarousel" data-slide-to="2"></li>
+            <li data-target="#imageCarousel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="assets/images/med28.jpg" style="width:1300px; height:632px;" class="img-responsive" />
+                <!-- <div class="carousel-caption">
+                    <h3 class="text-primary">Meditation 2</h3>
+                    <p >Dog meditating funny</p>
+                </div> -->
+            </div>
+
+            <div class="item">
+                <img src="assets/images/med34.jpg" style="width:1300px; height:600px;" class="img-responsive" />
+                <!-- <div class="carousel-caption">
+                    <h3 >Meditation 3</h3>
+                    <p>Meditation</p>
+                </div> -->
+            </div>
+
+            <div class="item">
+                <img src="assets/images/med30.jpg" style="width:1300px; height:600px;" class="img-responsive" />
+                <!-- <div class="carousel-caption">
+                    <h3>Meditation 4</h3>
+                    <p>Medition galore</p>
+                </div> -->
+            </div>
+
+            <div class="item">
+                <img src="assets/images/med31.jpg" style="width:1300px; height:600px;" class="img-responsive" />
+                <!-- <div class="carousel-caption">
+                    <h3>Meditation 5</h3>
+                    <p>Dog meditating funny 2</p>
+                </div> -->
+            </div>
         </div>
-    </nav>
+
+        <a class="left carousel-control" href="#imageCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#imageCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+        $('#imageCarousel').carousel();
+    }
+    );
+</body>
+</html>

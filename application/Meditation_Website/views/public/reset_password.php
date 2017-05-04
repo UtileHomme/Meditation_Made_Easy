@@ -8,7 +8,7 @@ include ('public_header.php');
     as soon as submit button is clicked, it will go the the login controller and access
     the admin_login function of that controller -->
     <?php
-    echo form_open("forgotpassword/new_password", ['class'=>'form-horizontal']);
+    echo form_open("forgotpassword/new_password/{$this->uri->segment(3)}", ['class'=>'form-horizontal']);
     echo form_hidden('code', $this->uri->segment(3)) ;
      ?>
 
@@ -117,6 +117,6 @@ include ('public_header.php');
 </form>
 </div>
 
-<?php
+<!-- <?php
 include 'public_footer.php';
-?>
+?> -->

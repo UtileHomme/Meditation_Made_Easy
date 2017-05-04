@@ -147,6 +147,6 @@ include ('public_header.php');
 </div>
 </div>
 
-<?php
+<!-- <?php
 include 'public_footer.php';
-?>
+?> -->

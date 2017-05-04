@@ -66,13 +66,13 @@ class Forgotpassword extends MY_Controller
 
         if($this->form_validation->run()==false)
         {
+            // return redirect("forgotpassword/new_password/".$data['code']);
             $this->load->view('public/reset_password',$this->uri->segment(3));
         }
         else
         {
             $this->input->post('email');
             $this->input->post('code');
-            exit;
             $this->load->model('forgotpasswordmodel','forgot');
             $num_rows = $this->forgot->code_match($this->input->post('code'),$email);
             if($num_rows == 1)

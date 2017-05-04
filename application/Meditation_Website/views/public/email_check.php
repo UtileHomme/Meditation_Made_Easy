@@ -73,6 +73,6 @@ include ('public_header.php');
 </form>
 </div>
 
-<?php
+<!-- <?php
 include 'public_footer.php';
-?>
+?> -->
